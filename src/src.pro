@@ -8,7 +8,7 @@ TEMPLATE = lib
 
 TARGET = myapp
 
-SOURCES += myclass.cpp \
+SOURCES += \
     SelectionSort.cpp
-HEADERS += myclass.h \
+HEADERS += \
     SelectionSort.h
