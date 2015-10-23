@@ -6,7 +6,7 @@ CONFIG   -= qt
 
 TEMPLATE = lib
 
-TARGET = myapp
+TARGET = selsort
 
 SOURCES += \
     SelectionSort.cpp

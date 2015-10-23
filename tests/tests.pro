@@ -8,7 +8,7 @@ TEMPLATE = app
 SOURCES += \
     test_selectionsort.cpp
 
-LIBS += -L../src -lmyapp
+LIBS += -L../src -lselsort
 QT       += testlib
 QT       -= gui
 
