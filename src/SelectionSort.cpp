@@ -23,7 +23,7 @@ void swap(std::vector<int>& data, size_t aId, size_t bId)
     data[bId] = temp;
 }
 
-size_t indexOfSubvecMin(std::vector<int>& data, size_t startIndex)
+size_t indexOfSubvecMin(const std::vector<int>& data, size_t startIndex)
 {
     assert(data.size() > startIndex);
 
