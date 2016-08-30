@@ -15,3 +15,10 @@
 
 # User settings
 *.user
+
+# Generated
+Makefile*
+
+# build
+*.dll
+*.exe

@@ -7,5 +7,7 @@ SUBDIRS = \
 tests.depends = src
 
 OTHER_FILES += \
-    defaults.pri
+    defaults.pri \
+    test_defaults.pri
+
 

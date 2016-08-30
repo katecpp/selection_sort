@@ -11,4 +11,5 @@ SOURCES += \
     CFoo.cpp
 HEADERS += \
     SelectionSort.h \
-    CFoo.h
+    CFoo.h \
+    InsertionSort.h
