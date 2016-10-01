@@ -3,6 +3,7 @@
 
 #include <QMetaType>
 #include <string>
+#include <iostream>
 
 namespace F
 {
@@ -19,7 +20,10 @@ public:
 private:
     int m_number;
     std::string m_name;
+
+    friend std::ostream & operator<<(std::ostream &os, const CFoo& foo);
 };
+
 }
 
 Q_DECLARE_METATYPE(F::CFoo)

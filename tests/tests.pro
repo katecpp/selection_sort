@@ -1,4 +1,4 @@
-include(../../defaults.pri)
+include(../defaults.pri)
 
 TEMPLATE = subdirs
 
@@ -6,4 +6,6 @@ DEFINES += SRCDIR=\\\"$$PWD/\\\"
 
 SUBDIRS += \
     Test_insertionSort \
-    Test_selectionSort
+    Test_selectionSort \
+    Test_bubbleSort
+

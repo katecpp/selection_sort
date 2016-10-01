@@ -1,19 +1,20 @@
 #include <QtTest>
 #include <string>
 #include <vector>
+#include <assert.h>
 
-#include <SelectionSort.h>
+#include <BubbleSort.h>
 #include <data/CFoo.h>
 
 using std::string;
 using std::vector;
 
-class SelectionSort_test : public QObject
+class BubbleSort_test : public QObject
 {
     Q_OBJECT
 
 public:
-    SelectionSort_test();
+    BubbleSort_test();
 
 private Q_SLOTS:
 
@@ -27,18 +28,18 @@ private Q_SLOTS:
     void sort_foo();
 };
 
-void SelectionSort_test::swap_test()
+void BubbleSort_test::swap_test()
 {
     QFETCH(vector<int>, inputVector);
     QFETCH(int, idA);
     QFETCH(int, idB);
     QFETCH(vector<int>, result);
 
-    SELS::swap(inputVector,idA,idB);
+    BBS::swap(inputVector,idA,idB);
     QCOMPARE(inputVector, result);
 }
 
-void SelectionSort_test::swap_test_data()
+void BubbleSort_test::swap_test_data()
 {
     QTest::addColumn<vector<int>>("inputVector");
     QTest::addColumn<int>("idA");
@@ -58,16 +59,16 @@ void SelectionSort_test::swap_test_data()
             << std::vector<int>({10,2,3,4,5,6,7,8,9,1});
 }
 
-void SelectionSort_test::sort_test()
+void BubbleSort_test::sort_test()
 {
     QFETCH(vector<int>, inputVector);
     QFETCH(vector<int>, result);
 
-    SELS::sort(inputVector);
+    BBS::sort(inputVector);
     QCOMPARE(inputVector, result);
 }
 
-void SelectionSort_test::sort_test_data()
+void BubbleSort_test::sort_test_data()
 {
     QTest::addColumn<vector<int>>("inputVector");
     QTest::addColumn<vector<int>>("result");
@@ -89,7 +90,7 @@ void SelectionSort_test::sort_test_data()
             << std::vector<int>({1,2,3,4,5,6,7,8,9,10});
 }
 
-void SelectionSort_test::sort_foo_data()
+void BubbleSort_test::sort_foo_data()
 {
     QTest::addColumn<vector<F::CFoo>>("inputVector");
     QTest::addColumn<vector<F::CFoo>>("result");
@@ -99,20 +100,20 @@ void SelectionSort_test::sort_foo_data()
             << std::vector<F::CFoo>({F::CFoo(1,"a"), F::CFoo(2,"b"), F::CFoo(3,"c")});
 }
 
-void SelectionSort_test::sort_foo()
+void BubbleSort_test::sort_foo()
 {
     QFETCH(vector<F::CFoo>, inputVector);
     QFETCH(vector<F::CFoo>, result);
 
-    SELS::sort(inputVector);
+    BBS::sort(inputVector);
     QCOMPARE(inputVector, result);
 }
 
-SelectionSort_test::SelectionSort_test()
+BubbleSort_test::BubbleSort_test()
 {
 }
 
 
-QTEST_APPLESS_MAIN(SelectionSort_test)
+QTEST_APPLESS_MAIN(BubbleSort_test)
 
-#include "test_selectionsort.moc"
+#include "test_bubblesort.moc"

@@ -8,8 +8,9 @@ TEMPLATE = lib
 TARGET = selsort
 
 SOURCES += \
-    CFoo.cpp
+    data/CFoo.cpp
 HEADERS += \
+    data/CFoo.h \
     SelectionSort.h \
-    CFoo.h \
-    InsertionSort.h
+    InsertionSort.h \
+    BubbleSort.h

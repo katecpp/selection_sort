@@ -5,11 +5,10 @@ CONFIG -= app_bundle gui
 TEMPLATE = app
 
 unix {
-    message("Build: unix");
-    LIBS += -L$$SRC_DIR/src/build/debug -lselsort
+    message("Build: unix. Unselect Shadow Build option.");
+    LIBS += -L$$SRC_DIR/src -lselsort
 } else {
     message("Build: windows");
-message($$SRC_DIR)
     LIBS += -L$$SRC_DIR/src/debug -lselsort
 }
 

@@ -3,7 +3,7 @@
 #include <vector>
 
 #include <InsertionSort.h>
-#include <CFoo.h>
+#include <data/CFoo.h>
 
 using std::string;
 using std::vector;

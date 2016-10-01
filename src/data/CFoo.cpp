@@ -1,4 +1,4 @@
-#include <CFoo.h>
+#include <data/CFoo.h>
 
 namespace F
 {
@@ -25,6 +25,11 @@ CFoo& CFoo::operator=(const CFoo &other)
         m_name = other.m_name;
         return *this;
     }
+}
+
+std::ostream & operator<<(std::ostream &os, const CFoo& foo)
+{
+    return os << foo.m_name << ":" << foo.m_number;
 }
 
 } // namespace F
