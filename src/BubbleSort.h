@@ -28,7 +28,7 @@ void sort(std::vector<T>& data)
 
     while (sortedPartLen < lastElementId)
     {
-        for (int pos = lastElementId; pos > 0; pos--)
+        for (size_t pos = lastElementId; pos > sortedPartLen; pos--)
         {
             if (data[pos] < data[pos-1])
             {
